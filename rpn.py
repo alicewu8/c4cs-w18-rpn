@@ -10,15 +10,7 @@ import operator
 import logging
 import sys
 
-logger = logging.getLogger(__name__)
-
-# logger will show debug-level messages
-logger.setLevel(logging.DEBUG)
-
-sh = logging.StreamHandler(sys.stdout)
-# add a stream handler to send the message to standard out
-logger.addHandler(sh)
-
+logging.basicConfig(level=logging.DEBUG)
 
 # create a hash table that maps from a hash table to a function
 # writing a dictionary (key : value)
@@ -56,7 +48,7 @@ def calculate(arg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-        logger.debug(stack)
+        logging.debug(stack)
 
 
     if len(stack) != 1:
