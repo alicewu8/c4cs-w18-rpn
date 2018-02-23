@@ -19,6 +19,9 @@ def calculate(arg):
             return arg1 + arg2
             stack.append(result)
         print(stack)
+    
+    # empty the stack and add a return value
+    return stack.pop()
         
 def main():
     while True:
