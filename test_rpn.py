@@ -1,6 +1,8 @@
 # python standard library module
 import unittest
 
+import operator
+
 # import is similar to include in C++
 import rpn
 
@@ -22,6 +24,9 @@ class TestBasics(unittest.TestCase):
         # with expects to raise an error
         with self.assertRaises(TypeError):
             result = rpn.calculate('1 2 3 +')
+    def test_manyadds(self):
+        result = rpn.calculate('19 21 +')
+        self.assertEqual(40, result);
 
 
 

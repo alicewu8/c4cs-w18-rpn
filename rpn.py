@@ -7,6 +7,17 @@
 
 # operator is a library of operators
 import operator
+import logging
+import sys
+
+logger = logging.getLogger(__name__)
+
+# logger will show debug-level messages
+logger.setLevel(logging.DEBUG)
+
+sh = logging.StreamHandler(sys.stdout)
+# add a stream handler to send the message to standard out
+logger.addHandler(sh)
 
 
 # create a hash table that maps from a hash table to a function
@@ -15,6 +26,11 @@ operators = {
     # defining add and subtract like they are functions
     '+': operator.add,
     '-': operator.sub,
+    '*': operator.mul,
+    # added another comma after truediv because it's specified for how you
+    # should write Python and makes for cleaner commits
+    '/': operator.truediv,
+    '^': operator.pow,
 }
 
 def calculate(arg):
@@ -40,7 +56,8 @@ def calculate(arg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-        print(stack)
+        logger.debug(stack)
+
 
     if len(stack) != 1:
         raise TypeError
