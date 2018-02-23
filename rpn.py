@@ -14,10 +14,19 @@ def calculate(arg):
 
         # if anything in the try block fails, program jumps to except block
         except ValueError:
-            arg1 = stack.pop()
-            arg2 = stack.pop()
-            return arg1 + arg2
-            stack.append(result)
+            if token == '+':
+                arg2 = stack.pop()
+                arg1 = stack.pop()
+                return arg1 + arg2
+                stack.append(result)
+            elif token == '-':
+                arg2 = stack.pop()
+                arg1 = stack.pop()
+                return arg1 - arg2
+                stack.append(result)
+                print(stack)
+            else:
+                print('Not an operator.')
         print(stack)
     
     # empty the stack and add a return value
