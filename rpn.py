@@ -35,8 +35,8 @@ def calculate(arg):
 # arg.split() takes the string and turns it into tokens
 	for token in arg.split(): 
 		try:
-	value = int(token)
-	 stack.append(value)
+ 	           value = int(token)
+	           stack.append(value)
 
 # if anything in the try block fails, program jumps to except block
 	 except ValueError:
