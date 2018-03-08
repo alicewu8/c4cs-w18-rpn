@@ -28,12 +28,12 @@ class TestBasics(unittest.TestCase):
             result = rpn.calculate('1 2 3 +')
     def test_manyadds(self):
         result = rpn.calculate('19 21 +')
-        self.assertEqual(40, result);
+        self.assertEqual(40, result)
     def test_pow(self):
         result = rpn.calculate('2 2 ^')
-        self.assertEqual(4, result);
+        self.assertEqual(4, result)
     def test_pow(self):
 	result = rpn.calculate('2 0 ^')
-	self.assertEqual(1, result);
+	self.assertEqual(1, result)
 
 

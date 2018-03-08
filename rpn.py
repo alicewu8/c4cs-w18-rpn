@@ -56,7 +56,23 @@ def calculate(arg):
     
     # empty the stack and add a return value
     return stack.pop()
-        
+
+def summation(arg):
+    # initializes an empty list
+    stack = list()
+    
+    # stores the numbers from the argument into the list
+    for num in arg.split():
+        try:
+            value = int(token)
+            stack.append(value)
+
+    for value in stack:
+        summation += value
+    stack.append(summation)
+
+    return stack.pop()
+    
 def main():
     while True:
         print(calculate(input('rpn calc> ')))
