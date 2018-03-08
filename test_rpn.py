@@ -32,8 +32,6 @@ class TestBasics(unittest.TestCase):
     def test_pow(self):
         result = rpn.calculate('2 2 ^')
         self.assertEqual(4, result)
-    def test_pow(self):
-	result = rpn.calculate('2 0 ^')
-	self.assertEqual(1, result)
+    
 
 
