@@ -2,4 +2,4 @@
  python:
    - "3.5"
  script:
-   - python3 -m unittest
+   - make test
