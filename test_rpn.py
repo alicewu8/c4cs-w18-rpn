@@ -1,3 +1,5 @@
+# for advanced homework 8: send in screenshots of calculations that fail and then tests that fix them
+
 # python standard library module
 import unittest
 
@@ -27,7 +29,11 @@ class TestBasics(unittest.TestCase):
     def test_manyadds(self):
         result = rpn.calculate('19 21 +')
         self.assertEqual(40, result);
-
-
+    def test_pow(self):
+        result = rpn.calculate('2 2 ^')
+        self.assertEqual(4, result);
+    def test_pow(self):
+	result = rpn.calculate('2 0 ^')
+	self.assertEqual(1, result);
 
 
