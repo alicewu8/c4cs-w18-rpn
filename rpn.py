@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 # create a hash table that maps from a hash table to a function
 # writing a dictionary (key : value)
-	operators = {
+operators = {
 # defining add and subtract like they are functions
 		'+': operator.add,
 		'-': operator.sub,
